@@ -22,7 +22,7 @@ export class SignInWithAppleWeb extends WebPlugin implements SignInWithApplePlug
               scope: options.scopes ?? undefined,
               state: options.state ?? undefined,
               nonce: options.nonce ?? undefined,
-              usePopup: true,
+              usePopup: options.usePopup ?? true,
             });
 
             AppleID.auth
